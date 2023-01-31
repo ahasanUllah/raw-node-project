@@ -3,8 +3,11 @@
 // Module Scafolding
 const handler = {};
 
-handler.notFoundHandlers = () => {
-    console.log('not Found handlers');
+handler.notFoundHandlers = (reqestedProperties, callback) => {
+    console.log(reqestedProperties);
+    callback(404, {
+        message: 'sorry not found',
+    });
 };
 
 module.exports = handler;

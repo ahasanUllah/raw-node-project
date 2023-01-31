@@ -4,7 +4,8 @@
 const handler = {};
 
 handler.sampleHandlers = (reqestedProperties, callback) => {
-    callback();
+    console.log(reqestedProperties);
+    callback(200, { message: 'This is body' });
 };
 
 module.exports = handler;
